@@ -69,7 +69,7 @@ jobs:
       - name: 安装Flutter
         uses: subosito/flutter-action@v1
         with:
-          channel: "dev"
+          channel: "main"
 
       - name: 切换至master分支
         run: flutter channel master
