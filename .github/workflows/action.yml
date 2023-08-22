@@ -1,9 +1,7 @@
 name: Build Action
 
-on:
-  push:
-    tags:
-      - "v*"
+on: workflow_dispatch
+
 
 jobs:
   build-windows:
