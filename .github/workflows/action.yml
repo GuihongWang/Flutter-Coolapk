@@ -21,7 +21,10 @@ jobs:
         run: 
          wget https://raw.githubusercontent.com/Homebrew/homebrew-cask/f0539f4badc255300a6b46a28683e7715458826a/Casks/flutter.rb && brew install flutter.rb
 
+      - name: rm
+        run: rm macos/Podfile
 
+        
       - name: 执行flutter pub get
         run: flutter pub get
 
