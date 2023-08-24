@@ -112,7 +112,7 @@ packages:
       path: "."
       ref: HEAD
       resolved-ref: "188e1cb3081c63a25c2d9560e985c01099fc0447"
-      url: "git://github.com/jonataslaw/extended_image.git"
+      url: "https://github.com/jonataslaw/extended_image.git"
     source: git
     version: "0.7.2"
   extended_image_library:
