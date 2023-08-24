@@ -29,7 +29,7 @@ jobs:
         run: flutter config --enable-macos-desktop
 
       - name: 编译MacOS版
-        run: flutter build macos
+        run: flutter build macos --release
 
       - name: 打包MacOS版到zip
         uses: DuckSoft/create-7z-action@master
