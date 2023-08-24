@@ -18,12 +18,7 @@ jobs:
           key: ${{ runner.OS }}-flutter-install-cache-master
 
       - name: 安装Flutter
-        uses: subosito/flutter-action@v1
-        with:
-          channel: "dev"
-
-      - name: 切换至master分支
-        run: flutter channel master
+        run: brew install flutter
 
       - name: 执行flutter pub get
         run: flutter pub get
