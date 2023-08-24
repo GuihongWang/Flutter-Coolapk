@@ -71,8 +71,6 @@ jobs:
         with:
           channel: "main"
 
-      - name: 切换至master分支
-        run: flutter channel master
 
       - name: 执行flutter pub get
         run: flutter pub get
@@ -81,7 +79,7 @@ jobs:
         run: flutter config --enable-macos-desktop
 
       - name: 编译MacOS版
-        run: flutter build macos --release
+        run: flutter build macos
 
       - name: 打包MacOS版到zip
         uses: DuckSoft/create-7z-action@master
