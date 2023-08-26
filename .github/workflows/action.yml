@@ -29,16 +29,16 @@ jobs:
         run: flutter pub get
 
       - name: flutter config 启用 MacOS
-        run: flutter config --enable-macos-desktop
+        run: echo hello
 
       - name: 编译MacOS版
-        run: flutter build macos --release
+        run: flutter build ios
 
       - name: 打包MacOS版到zip
         uses: DuckSoft/create-7z-action@master
         with:
-          pathSource: "build/macos/Build/Products/Release"
-          pathTarget: "build/macos/Build/Products/macos.7z"
+          pathSource: "build/ios/Build/Products/Release"
+          pathTarget: "build/ios/Build/Products/macos.7z"
 
       - name: 获取当前时间
         uses: srfrnk/current-time@master
@@ -52,7 +52,7 @@ jobs:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "build_macos_${{steps.current-time.outputs.formattedTime}}"
           prerelease: true
-          files: build/macos/Build/Products/macos.7z
+          files: build/ios/Build/Products/macos.7z
 
 
   # build-linux:
